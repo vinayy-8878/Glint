@@ -14,7 +14,7 @@ const Background = () => {
         backgroundRepeat: 'no-repeat',
         minHeight: '100vh',
         width: '100vw', 
-        position: 'absolute'
+        // position: 'absolute'
         
       }}
       

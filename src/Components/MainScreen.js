@@ -1,14 +1,16 @@
 import React from 'react';
 import Bg from './Bg';
 import Header from './Header';
-import CardMain from './CardMain'
+import CardMain from './CardMain';
+import Box from '@mui/material/Box';
+
 const MainScreen = () => {
   return (
-    <div >
-      <Header  />
-      <CardMain/>
+    <Box sx={{ position: 'relative' }}>
       <Bg />
-    </div>
+      <Header />
+      <CardMain />
+    </Box>
   );
 };
 

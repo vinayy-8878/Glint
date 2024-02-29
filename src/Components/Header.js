@@ -1,12 +1,12 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import logo from "../images/bg-head.jpg";
-import AnchorTemporaryDrawer from "./AnchorTemporaryDrawer"; // Import the AnchorTemporaryDrawer component
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import logo from '../images/bg-head.jpg';
+import AnchorTemporaryDrawer from './AnchorTemporaryDrawer'; // Import the AnchorTemporaryDrawer component
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false); // State to track if the drawer is open
@@ -16,18 +16,18 @@ const Header = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, position: 'relative' }}>
-      <AppBar position="static">
-        <Toolbar sx={{ justifyContent: "space-between", mt: 1 }}>
+    <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 1, backgroundColor: 'transparent' }}>
+      <AppBar sx={{ backgroundColor: 'transparent' }} position="static">
+        <Toolbar sx={{ justifyContent: 'space-between', mt: 1 }}>
           <img src={logo} alt="Logo" style={{ height: 30 }} />
 
           <div>
             <Button
               sx={{
-                color: "#39b54a",
-                "&:hover": {
-                  cursor: "pointer",
-                  color: "white",
+                color: '#39b54a',
+                '&:hover': {
+                  cursor: 'pointer',
+                  color: 'white',
                 },
               }}
               onClick={toggleDrawer} // Toggle the drawer on button click
@@ -52,7 +52,7 @@ const Header = () => {
         anchor="right" // Set the anchor to right
         open={isDrawerOpen} // Pass the state to determine if the drawer is open
         onClose={toggleDrawer} // Close the drawer when onClose is called
-      /> {/* Render the AnchorTemporaryDrawer component with right anchor */}
+      />
     </Box>
   );
 };
