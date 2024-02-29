@@ -8,6 +8,8 @@ function App() {
       <MainScreen />
       <SecondCard/>
       <ThirdCard/>
+      <SecondCard/>
+      <ThirdCard/>
     </div>
   );
 }
