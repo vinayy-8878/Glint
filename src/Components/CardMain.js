@@ -23,6 +23,7 @@ export default function BasicCard() {
     <>
       <Card
          sx={{
+          // height: isMediumDevice ? "auto" : "100vh",
           backgroundColor: 'transparent',
           position: 'absolute',
           top: isScreenSmall ? '10%' : isMediumDevice ? '60%' : '50%',
