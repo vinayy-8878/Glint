@@ -21,9 +21,9 @@ const FifthCard = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const issm = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <Card style={{ width: isSmallScreen ? "90%" : "70%", margin: "auto",  marginTop:  "-90px"  }} elevation={0} variant="outlined">
-      <CardContent style={{ textAlign: "center" }}>
-        <Grid container  justifyContent="center" sx={{ padding: 0 }}>
+    <Card style={{ width: isSmallScreen ? "85%" : "70%", margin: "auto", marginTop: "-90px" ,backgroundColor:'white'}} elevation={0} variant="outlined">
+      <CardContent style={{ textAlign: "center", padding: 0 }}>
+        <Grid container justifyContent="center" sx={{ padding: 0 }}>
           {images.map((image, index) => (
             <Grid key={index} item xs={issm ? 12 : isMediumScreen ? 6 : 6}>
               <img src={image} alt={`Image ${index}`} style={{ width: "100%", height: "100%" }} />
