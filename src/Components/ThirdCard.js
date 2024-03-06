@@ -45,9 +45,9 @@ const ThirdCard = () => {
       <Typography sx={{ mt: 3 }} variant="h6" color="#39b54a">
         What we do
       </Typography>
-      <Typography sx={{ mt: 3 }} variant="h3" color="black">
+      {/* <Typography sx={{ mt: 3 }} variant="h3" color="black">
         We’ve got everything you need to launch and grow your business
-      </Typography>
+      </Typography> */}
       <Box sx={{ width: "100%", borderBottom: " 1px solid #757575", mt: 2 }} />
     </CardContent>
 
