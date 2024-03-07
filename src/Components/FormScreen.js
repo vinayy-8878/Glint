@@ -9,7 +9,13 @@ import CarouselComponent from "../Components/CarouselComponent";
 // import { TextFields } from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookTwoToneIcon from "@mui/icons-material/FacebookTwoTone";
+import FilterCenterFocusIcon from "@mui/icons-material/FilterCenterFocus";
+import StormIcon from "@mui/icons-material/Storm";
+// import useMediaQuery from '@mui/material/useMediaQuery';
+import Stack from "@mui/material/Stack";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -27,7 +33,7 @@ const FormScreen = () => {
   return (
     <Card
       style={{
-        // height: "100vh",
+        height: isSmallScreen ? 'auto' : "110vh",
         width: "100%",
         backgroundColor: "black",
         padding: 0,
@@ -60,6 +66,7 @@ const FormScreen = () => {
               backgroundColor: "#1a1a1a",
               color: "white",
               textAlign: "left",
+              height:'80vh'
             }}
           >
             <CardContent>
@@ -137,6 +144,7 @@ const FormScreen = () => {
               color: "white",
               textAlign: "left",
               marginTop:isSmallScreen ?'10px':'0',
+              height:'80vh'
             }}
           >
             <CardContent>
@@ -164,7 +172,7 @@ const FormScreen = () => {
               <Typography variant="h6" style={{ color: "#39b54a" }}>
                 Call Us At
               </Typography>
-              <Typography style={{ color: "grey", marginBottom: '50px' }}>
+              <Typography style={{ color: "grey", marginBottom: '30px' }}>
                 Phone: (+63) 555 1212
                 <br />
                 Mobile: (+63) 555 0100
@@ -172,6 +180,73 @@ const FormScreen = () => {
                 Fax: (+63) 555 0101
               </Typography>
             </CardContent>
+            <Stack sx={{marginLeft: "16px",}} direction="row" spacing={0}>
+      <FacebookTwoToneIcon
+        sx={{
+          color: "white", // Grey color
+          borderRadius: "50%",
+          padding: "4px", // Decreased padding
+          fontSize: "1.5rem", // Decreased font size
+          transition: "color 0.3s", // Smooth color transition
+          "&:hover": {
+            color: "#39b54a", // Change color to white on hover
+            cursor: "pointer", // Show pointer cursor on hover
+          },
+        }}
+      />
+      <TwitterIcon
+        sx={{
+          color: "white",
+          borderRadius: "50%",
+          padding: "4px",
+          fontSize: "1.5rem",
+          transition: "color 0.3s",
+          "&:hover": {
+            color: "#39b54a",
+            cursor: "pointer",
+          },
+        }}
+      />
+      <InstagramIcon
+        sx={{
+          color: "white",
+          borderRadius: "50%",
+          padding: "4px",
+          fontSize: "1.5rem",
+          transition: "color 0.3s",
+          "&:hover": {
+            color: "#39b54a",
+            cursor: "pointer",
+          },
+        }}
+      />
+      <FilterCenterFocusIcon
+        sx={{
+          color: "white",
+          borderRadius: "50%",
+          padding: "4px",
+          fontSize: "1.5rem",
+          transition: "color 0.3s",
+          "&:hover": {
+            color: "#39b54a",
+            cursor: "pointer",
+          },
+        }}
+      />
+      <StormIcon
+        sx={{
+          color: "white",
+          borderRadius: "50%",
+          padding: "4px",
+          fontSize: "1.5rem",
+          transition: "color 0.3s",
+          "&:hover": {
+            color: "#39b54a",
+            cursor: "pointer",
+          },
+        }}
+      />
+    </Stack>
           </Card>
         </div>
       </CardContent>

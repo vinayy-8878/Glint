@@ -1,0 +1,9 @@
+.colorlib-text {
+    color: white;
+    transition: color 0.3s; /* Smooth transition effect */
+    cursor: pointer; /* Set cursor to pointer on hover */
+  
+    &:hover {
+      color: #39b54a; /* Change color on hover */
+    }
+  }
