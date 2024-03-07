@@ -23,6 +23,8 @@ const settings = {
   speed: 500,
   slidesToShow: 6,
   slidesToScroll: 1,
+  // nextArrow: null, 
+  //   prevArrow: null,
   appendDots: dots => (
     <ul style={{ display: 'flex', justifyContent: 'center', margin: '20px 0', padding: 0 }}>
       {dots.slice(0, 4)} {/* Display only 4 dots */}
@@ -36,7 +38,7 @@ const CarouselComponent = () => {
     const mdScreen = useMediaQuery(theme.breakpoints.up('md'));
     const smScreen = useMediaQuery(theme.breakpoints.up('sm'));
     const xsScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const iconSize = lgScreen?'100px':mdScreen ? '55px' : smScreen ? '35px' : xsScreen ? '0px' : '0px';
+    const iconSize = lgScreen?'100px':mdScreen ? '55px' : smScreen ? '35px' : xsScreen ? '40px' : '0px';
     const icons = [
         <AppleIcon style={{ fontSize: iconSize }}/>,
         <AnimationIcon style={{ fontSize: iconSize }}/>,
@@ -46,7 +48,7 @@ const CarouselComponent = () => {
         <FilterDramaIcon style={{ fontSize: iconSize }}/>,
         <LensBlurIcon style={{ fontSize: iconSize }}/>,
     ];
-    const numIcons = lgScreen?6:mdScreen ? 5 : smScreen ? 4 : xsScreen ? 0 : 0;
+    const numIcons = lgScreen?6:mdScreen ? 5 : smScreen ? 4 : xsScreen ? 2 : 0;
 
     const [hoveredIndex, setHoveredIndex] = useState(-1);
 
@@ -59,8 +61,11 @@ const CarouselComponent = () => {
     };
 
     return (
-      <Card style={{ width: '70%', margin: '0 auto', display: xsScreen ? 'none' : 'block' }}>
-        <CardContent>
+      <div style={{ width: '70%', margin: '60px auto'}}>
+        <div>
+        <style>
+                    {`.slick-prev, .slick-next { display: none !important; }`}
+                </style>
           <div style={{ textAlign: 'center' }}>
             <Slider {...settings} slidesToShow={numIcons}>
               {icons.map((icon, index) => (
@@ -83,8 +88,8 @@ const CarouselComponent = () => {
               ))}
             </Slider>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     );
   };
   
